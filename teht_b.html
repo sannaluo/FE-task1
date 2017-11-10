@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+    <h1>Lomakkeen validointi HTML5</h1>
+
+    <form novalidate action="lomakePOST.php" method="post">
+        <label>First name*: <input type="text" name="firstName" required placeholder="John"></label><br>
+        <label>Last name*: <input type="text" name="lastName" required placeholder="Smith"></label><br>
+        <label>Email address*: <input type="email" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required placeholder="example@mail.com"></label><br>
+        <label>Phone number: <input type="tel" name="phoneNumber" pattern="^\+[0-9]*$" placeholder="+358"></label><br>
+        <label>Address: <input type="text" name="address" placeholder="Happyroad 1 A"></label><br>
+        <label>Postal code:  <input type="number" name="postalCode" pattern="^[0-9]{5}$" placeholder="00000"></label><br>
+        <label>Password*: <input type="password" name="password" required placeholder="**********"></label><br>
+        <input type="submit">
+    </form>
+    <p>*required</p>
+    <script src="js/main.js"></script>
+    </body>
+</html>
